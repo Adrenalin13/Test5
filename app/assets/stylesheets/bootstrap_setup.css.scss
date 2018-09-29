@@ -1,0 +1,23 @@
+$display3-size: 2.5rem !default;
+$jumbotron-bg: rgba(255, 255, 255, 0.5);
+// $btn-primary-bg: #6BB9f0;
+
+@import "bootstrap";
+
+
+a {
+	outline: none; /* Убираем границу вокруг ссылок  */
+}
+
+.container-background {
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-image: url(image_path('background.jpg'));
+}
+
+.jumbotron-landing {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
