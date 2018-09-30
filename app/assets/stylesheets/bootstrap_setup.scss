@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Satisfy");
+
 $display3-size: 2.5rem !default;
 $jumbotron-bg: rgba(255, 255, 255, 0.5);
 // $btn-primary-bg: #6BB9f0;
@@ -16,8 +18,9 @@ a {
 	background-image: url(image_path('background.jpg'));
 }
 
-.jumbotron-landing {
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
+
+.logo-text {
+	font-family: 'Satisfy', cursive;
+	font-size: 2.5rem;
+	text-color: #fff;
 }
