@@ -16,6 +16,9 @@
           <%= link_to "О проекте", pages_about_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
+          <%= link_to "Редактировать", edit_user_registration_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
           <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
       </ul>

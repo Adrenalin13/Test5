@@ -2,6 +2,8 @@
 
 $display3-size: 2.5rem !default;
 $jumbotron-bg: rgba(255, 255, 255, 0.5);
+$card-cap-bg: rgba(255, 255, 255, 0.5);
+$card-bg: rgba(255, 255, 255, 0.4);
 // $btn-primary-bg: #6BB9f0;
 
 @import "bootstrap";
@@ -23,4 +25,10 @@ a {
 	font-family: 'Satisfy', cursive;
 	font-size: 2.5rem;
 	text-color: #fff;
+}
+
+.devise-form-card {
+	width: 50%;
+	// margin-right: auto;
+	margin-left: auto;
 }
