@@ -1,5 +1,7 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :owner, only: [:edit, :update, :destroy]
 
   # GET /photos
   # GET /photos.json
@@ -14,7 +16,7 @@ class PhotosController < ApplicationController
 
   # GET /photos/new
   def new
-    @photo = Photo.new
+    @photo = current_user.photos.build
   end
 
   # GET /photos/1/edit
@@ -24,7 +26,7 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-    @photo = Photo.new(photo_params)
+    @photo = current_user.photos.build(photo_params)
 
     if @photo.save
       redirect_to @photo, notice: 'Photo was successfully created.'
@@ -50,6 +52,7 @@ class PhotosController < ApplicationController
     redirect_to photos_url, notice: 'Photo was successfully destroyed.'
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_photo
@@ -59,5 +62,10 @@ class PhotosController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
       params.require(:photo).permit(:description)
+    end
+
+    def owner
+      @photo = current_user.photos.find_by(id: params[:id])
+      redirect_to photos_path, notice: "У вас нет разрешения на изменение этой фотографии" if @photo.nil?
     end
 end

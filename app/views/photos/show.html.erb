@@ -1,17 +1,23 @@
 <div class="card photo-form-card">
   <div class="card-header">
-    <h2>Фото <%= @photo.id %></h2>
+    <h2>Фото <%= @photo.description %></h2>
   </div>
   <div class="card-body">
 
-    <p id="notice"><%= notice %></p>
+    <!-- <p id="notice"><%= notice %></p> -->
 
     <p>
       <strong>Description:</strong>
       <%= @photo.description %>
+      <br>
+      <strong>User email:</strong>
+      <%= @photo.user.email if @photo.user %>
     </p>
+    
+    <% if @photo.user == current_user %>
+      <%= link_to 'Edit', edit_photo_path(@photo) %> |
+    <% end %>
 
-    <%= link_to 'Edit', edit_photo_path(@photo) %> |
     <%= link_to 'Back', photos_path %>
 
   </div>
