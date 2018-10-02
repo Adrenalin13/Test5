@@ -36,6 +36,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 gem 'devise', '~> 4.5'
 gem 'jquery-rails'
+gem 'paperclip', '~> 6.1'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
