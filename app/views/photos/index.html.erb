@@ -22,9 +22,14 @@
   </div>
 <% end %>
 
+
+<br>
 <br>
 
 <% if user_signed_in? %>
   <%= link_to 'New Photo', new_photo_path, class: "btn btn-primary" %>
 <% end -%>
 
+<br>
+
+<%= will_paginate(@photos, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>

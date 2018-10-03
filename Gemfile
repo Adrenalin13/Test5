@@ -37,6 +37,8 @@ gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 gem 'devise', '~> 4.5'
 gem 'jquery-rails'
 gem 'paperclip', '~> 6.1'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'bootstrap-will_paginate', '~> 1.0'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
