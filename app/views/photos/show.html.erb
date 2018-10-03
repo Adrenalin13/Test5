@@ -7,7 +7,7 @@
     <!-- <p id="notice"><%= notice %></p> -->
 
     <p>
-      <strong><%= @photo.description %></strong>      
+      <strong><%= @photo.user.name %></strong>      
       <br>
       <br>
       <%= image_tag @photo.image.url(:large) %>
