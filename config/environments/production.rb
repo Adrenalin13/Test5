@@ -83,7 +83,19 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://stark-reaches-23862.herokuapp.com/' }
+
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'localhost:3000',
+  user_name:            ENV.fetch('MAIL_ACCOUNT_NAME'),  # Установить эти переменые в heroku командой heroku config:set MAIL_ACCOUNT_NAME=blablabla и тд
+  password:             ENV.fetch('MAIL_ACCOUNT_PASSWORD'),
+  authentication:       'plain',
+  enable_starttls_auto: true }
+
 
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
