@@ -39,6 +39,7 @@ gem 'jquery-rails'
 gem 'paperclip', '~> 6.1'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'bootstrap-will_paginate', '~> 1.0'
+gem 'ionicons-rails'
 
 
 group :development, :test do

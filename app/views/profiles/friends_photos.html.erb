@@ -7,20 +7,31 @@
   <div class="card photo-form-card">
     <div class="card-header">
 
-      <%= image_tag photo.image.url(:medium) %><br>
-      <%= photo.description %><br>
-      <%= link_to photo.user.name, profile_path(photo.user_id) if photo.user %><br>
-      <%= link_to 'Show', photo %>
+      <div class="img-container">
         
-      <% if photo.user == current_user %>
-        |
-        <%= link_to 'Edit', edit_photo_path(photo) %>
-        |
-        <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>      
+        <%= link_to photo, class: "photo-hover" do  %>
+          <%= image_tag photo.image.url(:medium), class: "img-photo" %>
+        <% end -%>
 
+      </div>
+
+      <br>
+
+      <%= photo.description %>
+
+      <br>
+
+      <%= link_to profile_path(photo.user_id) do %>
+        <i class="ion-person"></i> <%= photo.user.name %>
+      <% end -%>
+      <br>
+        
     </div>
   </div>
 
 <% end %>
 
+
+<% will_paginate(@photos, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center') %>
+
+    

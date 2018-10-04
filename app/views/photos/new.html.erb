@@ -1,12 +1,14 @@
 <div class="card photo-form-card">
-  <div class="card-header">
+  <div class="card-header color-head">
     <h2>Новое фото</h2>
   </div>
   <div class="card-body">
 
     <%= render 'form', photo: @photo %>
+    
+    <br>
 
-    <%= link_to 'Back', photos_path %>
+    <%= link_to 'Back', photos_path, class: "btn btn-primary" %>
 
   </div>
 </div>

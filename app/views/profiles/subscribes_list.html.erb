@@ -5,11 +5,12 @@
     <div class="card-header">
  
       <%= link_to friend.name, profile_path(friend.id) %> |
-      <%= link_to "Отписаться", unsubscribe_profile_path(friend.id) %>
+      <%= link_to "Отписаться", unsubscribe_profile_path(friend.id), class: "btn btn-primary" %>
 
     </div>
   </div>
 
+  <br>
   <br>
 
 <% end %>      

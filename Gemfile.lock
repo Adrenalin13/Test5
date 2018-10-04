@@ -97,6 +97,7 @@ GEM
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
+    ionicons-rails (2.0.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -249,6 +250,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise (~> 4.5)
+  ionicons-rails
   jbuilder (~> 2.5)
   jquery-rails
   letter_opener
