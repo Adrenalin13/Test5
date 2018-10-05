@@ -11,19 +11,19 @@
       <ul class="navbar-nav  mt-2 mt-lg-0">
 
         <li class="nav-item">
-          <%= link_to 'Новое фото', new_photo_path, class: "nav-link" %>
+          <%= link_to t('photos.upload'), new_photo_path, class: "nav-link" %>
         </li>
 
         <li class="nav-item">
-          <%= link_to "Фотографии", photos_path, class: "nav-link" %>
+          <%= link_to t('navigation.photos'), photos_path, class: "nav-link" %>
         </li>
 
         <li class="nav-item">
-          <%= link_to "Фото друзей", profiles_friends_photos_path, class: "nav-link" %>
+          <%= link_to t('navigation.friends_photos'), profiles_friends_photos_path, class: "nav-link" %>
         </li>
 
         <li class="nav-item">
-          <%= link_to "О проекте", pages_about_path, class: "nav-link" %>
+          <%= link_to t('navigation.about'), pages_about_path, class: "nav-link" %>
         </li>
 
       </ul>
@@ -33,11 +33,11 @@
           <%= current_user.name %>
         </button>
         <div class="dropdown-menu dropdown-menu-right">
-          <%= link_to "Редактировать профиль", edit_user_registration_path, class: "nav-link" %>
-          <%= link_to "Мои фото", profiles_my_photos_path, class: "nav-link dropdown-item" %>
-          <%= link_to "Мои подписки", profiles_subscribes_list_path, class: "nav-link dropdown-item" %>
+          <%= link_to t('photos.edit'), edit_user_registration_path, class: "nav-link" %>
+          <%= link_to t('navigation.my_photos'), profiles_my_photos_path, class: "nav-link dropdown-item" %>
+          <%= link_to t('navigation.my_subscription'), profiles_subscribes_list_path, class: "nav-link dropdown-item" %>
           <div class="dropdown-divider"></div>
-          <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: "nav-link dropdown-item" %>
+          <%= link_to t('navigation.logout'), destroy_user_session_path, method: :delete, class: "nav-link dropdown-item" %>
         </div>
       </div>
 
@@ -59,15 +59,15 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li> -->
         <li class="nav-item">
-          <%= link_to "Фотографии", photos_path, class: "nav-link" %>
+          <%= link_to t('navigation.photos'), photos_path, class: "nav-link" %>
         </li>
 
         <li class="nav-item">
-          <%= link_to "О проекте", pages_about_path, class: "nav-link" %>
+          <%= link_to t('navigation.about'), pages_about_path, class: "nav-link" %>
         </li>
 
         <li class="nav-item">
-          <%= link_to "Войти", new_user_session_path, class: "nav-link" %>
+          <%= link_to t('navigation.login'), new_user_session_path, class: "nav-link" %>
         </li>
       </ul>
       <!-- <form class="form-inline my-2 my-lg-0">

@@ -1,0 +1,24 @@
+ru:
+  landing:
+    header: "Делитесь своими эмоциями"
+    description: "Размещайте свои фотографии и подписывайтесь на публикации друзей."
+    buttons:
+      create_account: "Создать аккаунт"
+      login: "Войти"
+
+  navigation:
+    login: "Войти"
+    logout: "Выйти"
+    photos: "Фотографии"
+    about: "О проекте"
+    my_photos: "Мои фото"
+    my_subscription: "Мои подписки"
+    friends_photos: "Лента"
+    
+  photos:
+    edit: "Изменить"
+    delete: "Удалить"
+    upload: "Загрузить"
+    subscribe: "Подписаться"
+    unsubscribe: "Отписаться"
+    

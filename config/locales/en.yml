@@ -30,4 +30,25 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  landing:
+    header: "Share your emotions"
+    description: "Uploads your photos and follow your friends."
+    buttons:
+      create_account: "Create account"
+      login: "Sign in"
+
+  navigation:
+    login: "Sign in"
+    logout: "Sign out"
+    photos: "Photos"
+    about: "About"
+    my_photos: "My Photos"
+    my_subscription: "My Subscriptions"
+    friends_photos: "Feed"
+
+  photos:
+    edit: "Edit"
+    delete: "Delete"
+    upload: "Upload"
+    subscribe: "Subscribe"
+    unsubscribe: "Unsubscribe"
